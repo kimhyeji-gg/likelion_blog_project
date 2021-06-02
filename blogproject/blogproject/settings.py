@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tc&+5e-z$z2p^n(xf!(jdj)i&r$5$tjw$(wi)id0yf^h3l5g3*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'aboutme.apps.AboutmeConfig',
     'portfolio.apps.PortfolioConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'blogproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['blogproject/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -128,8 +129,11 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATIC_DIR = os.path.join(BASE_DIR,'portfolio' ,'static')
 
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
