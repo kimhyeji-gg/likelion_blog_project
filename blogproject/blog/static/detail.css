@@ -1,22 +1,22 @@
-.container{
+.card{
     margin:auto;
-    padding: 100px;
+    padding: 50px;
 }
 
 .name{
-    font-size:70px;
+    font-size:35px;
 }
 
-.title{
-    font-size:60px;
-
-}
-
-.date{
+.card-title{
     font-size:30px;
+
+}
+
+.text-muted{
+    font-size:15px;
     float:right;
 }
 
-.what{
-    font-size:45px;
+.card-text{
+    font-size:30px;
 }

@@ -7,3 +7,8 @@ class Portfolio(models.Model):
     writer = models.CharField(max_length = 100)
     pub_date = models.DateTimeField()
     body = models.TextField()
+    image = models.ImageField(upload_to = 'images/')
+    description = models.CharField(max_length = 100)
+
+    def __str__(self):
+        return self.title
